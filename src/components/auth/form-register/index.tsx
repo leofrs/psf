@@ -13,7 +13,11 @@ export default function FormRegister() {
         formState: { errors },
     } = useForm<Inputs>();
 
-    const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+    const onSubmit: SubmitHandler<Inputs> = (data: Inputs) => {
+        const { name, password, confirmPassword } = data;
+        if (password !== confirmPassword) alert("As senhas não são iguais");
+        console.log(name, password, confirmPassword);
+    };
 
     return (
         <form
