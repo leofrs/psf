@@ -12,8 +12,9 @@ export default function IndexRouter() {
     return (
         <Routes>
             {user ? (
-                <Route path="/auth/user/home" element={<ClientProtected />}>
-                    <Route index element={<HomeClient />} />
+                <Route path="/" element={<ClientProtected />}>
+                    <Route index element={<Navigate to="/auth/user/home" />} />
+                    <Route path="/auth/user/home" element={<HomeClient />} />
                 </Route>
             ) : (
                 <Route path="/" element={<HomePublic />}>
@@ -21,6 +22,8 @@ export default function IndexRouter() {
                     <Route path="/home" element={<Home />} />
                 </Route>
             )}
+
+            <Route path="*" element={<Navigate to="/" />} />
         </Routes>
     );
 }
