@@ -1,7 +1,12 @@
-import Home from "./pages/public/Home";
+import { BrowserRouter } from "react-router-dom";
+import IndexRouter from "./routes";
 
 function App() {
-    return <Home />;
+    return (
+        <BrowserRouter>
+            <IndexRouter />
+        </BrowserRouter>
+    );
 }
 
 export default App;

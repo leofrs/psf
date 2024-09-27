@@ -1,4 +1,7 @@
 import { useForm, SubmitHandler } from "react-hook-form";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { isUser } from "../../../redux/userSlice";
 
 type Inputs = {
     name: string;
@@ -12,7 +15,14 @@ export default function FormLogin() {
         formState: { errors },
     } = useForm<Inputs>();
 
-    const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+    const onSubmit: SubmitHandler<Inputs> = (data) => {
+        console.log(data);
+        dispatch(isUser(true));
+        navigate("/auth/user/home", { replace: true });
+    };
 
     return (
         <form
