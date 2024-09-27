@@ -7,6 +7,9 @@ import { RootState } from "../redux/store";
 import HomePublic from "../pages/public/HomePublic";
 import AdminProtected from "../pages/private/admin/AdminProtected";
 import HomeAdmin from "../pages/private/admin/Home";
+import MedicosClient from "../pages/private/client/Medicos";
+import MarcarConsulta from "../pages/private/client/MarcarConsulta";
+import HistoricoMedico from "../pages/private/client/Historico";
 
 export default function IndexRouter() {
     const user = useSelector((state: RootState) => state.user.value);
@@ -18,6 +21,18 @@ export default function IndexRouter() {
                 <Route path="/" element={<ClientProtected />}>
                     <Route index element={<Navigate to="/auth/user/home" />} />
                     <Route path="/auth/user/home" element={<HomeClient />} />
+                    <Route
+                        path="/auth/user/medicos"
+                        element={<MedicosClient />}
+                    />
+                    <Route
+                        path="/auth/user/marcar-consulta"
+                        element={<MarcarConsulta />}
+                    />
+                    <Route
+                        path="/auth/user/historico-medico"
+                        element={<HistoricoMedico />}
+                    />
                 </Route>
             ) : admin ? (
                 <Route path="/" element={<AdminProtected />}>

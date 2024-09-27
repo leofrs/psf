@@ -1,6 +1,6 @@
 import SideBar from "../../../components/client/sideBar";
 
-export default function HomeClient() {
+export default function HistoricoMedico() {
     return (
         <main className="w-dvw h-svh flex p-4 gap-4">
             <SideBar />
@@ -10,7 +10,7 @@ export default function HomeClient() {
                 </div>
                 <div className="w-full h-full border border-blue-700 rounded-md flex justify-center items-center shadow-md shadow-[#0C1B79]">
                     <p className="text-3xl font-medium">
-                        Bem vindo a página home client
+                        Bem vindo a página de historico médico
                     </p>
                 </div>
             </div>
