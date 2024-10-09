@@ -1,3 +1,4 @@
+import CardEspecialidades from "../../../components/client/cardEspecialidades";
 import SideBar from "../../../components/client/sideBar";
 
 export default function HomeClient() {
@@ -8,10 +9,8 @@ export default function HomeClient() {
         <div className="w-full h-20 border border-blue-700 rounded-md shadow-md shadow-[#0C1B79] flex justify-end items-center p-4">
           <h4>Seja bem vindo Leonardo 🖐️</h4>
         </div>
-        <div className="w-full h-full border border-blue-700 rounded-md flex justify-center items-center shadow-md shadow-[#0C1B79]">
-          <p className="text-3xl font-medium">
-            Bem vindo a página home cliente
-          </p>
+        <div className="w-full h-full border border-blue-700 rounded-md flex flex-wrap  shadow-md shadow-[#0C1B79] p-2 overflow-y-auto justify-center items-center gap-8">
+          <CardEspecialidades />
         </div>
       </div>
     </main>

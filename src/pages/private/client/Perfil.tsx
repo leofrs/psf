@@ -1,7 +1,6 @@
-import CardMedicos from "../../../components/client/cardMedicos";
 import SideBar from "../../../components/client/sideBar";
 
-export default function MedicosClient() {
+export default function Perfil() {
   return (
     <main className="w-dvw h-svh flex p-4 gap-4">
       <SideBar />
@@ -10,7 +9,7 @@ export default function MedicosClient() {
           <h4>Seja bem vindo Leonardo 🖐️</h4>
         </div>
         <div className="w-full h-full border border-blue-700 rounded-md flex flex-wrap  shadow-md shadow-[#0C1B79] p-2 overflow-y-auto justify-center items-center gap-8">
-          <CardMedicos />
+          <h1>Bem vindo a página de perfil do cliente</h1>
         </div>
       </div>
     </main>
